@@ -134,6 +134,7 @@ async def help(ctx):
     embed.add_field(name="=======================| Fun! |=======================", value="It looks like my game packages have shipped with me too!", inline=False)
     embed.add_field(name="[:raising_hand:] _opinion (word)", value="what do you think about something? \n what do you think lexi thinks about something?", inline=True)
     embed.add_field(name="[:point_right:] _yomamma @(user)", value="can't think of a good insult? I gotcha.", inline=True)
+    embed.add_field(name="[:package:] _mysterybox", value="feeling lucky? good guesser?", inline=True)
 
     embed.set_footer(text="Note: [asdf?]: this indicates an optional* value for a command")
 

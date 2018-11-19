@@ -45,7 +45,7 @@ class Games:
             await self.client.say("[:one:] [:two:] [:three:] [:four:] [:five:]")
             correct = random.randint(1, 5)
             hint_chance = random.randint(1, 3)
-            if hint_chance == 2:
+            if hint_chance != 2:
                 if correct % 2 == 0:
                     num_type = "even"
                 else:
@@ -81,6 +81,8 @@ class Games:
             print(mystery_box_queue)
         else:
             await self.client.say("You're already guessing, <@{}>!".format(player_id))
+
+    # TODO: add a madlibs game!
 
     async def on_message(self, message):
         author = message.author
