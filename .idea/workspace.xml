@@ -14,8 +14,8 @@
       <file leaf-file-name="bot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="120">
+              <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="68" />
               <folding>
                 <element signature="e#10#24#0" expanded="true" />
               </folding>
@@ -25,7 +25,11 @@
       </file>
       <file leaf-file-name="thing.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/misc/thing.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="custom_texts.py" pinned="false" current-in-tab="false">
@@ -126,6 +130,7 @@
         <option value="$PROJECT_DIR$/custom_texts.py" />
         <option value="$PROJECT_DIR$/texts/negative_adjectives.txt" />
         <option value="$PROJECT_DIR$/bot.py" />
+        <option value="$PROJECT_DIR$/misc/thing.txt" />
       </list>
     </option>
   </component>
@@ -687,8 +692,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="120">
+          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="68" />
           <folding>
             <element signature="e#10#24#0" expanded="true" />
           </folding>
@@ -696,7 +701,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/misc/thing.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

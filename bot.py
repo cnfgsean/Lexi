@@ -4,7 +4,8 @@ from discord.ext import commands
 import random
 import functions_en
 
-TOKEN = 'NTEyNDQyNTgzMTQyNzYwNDY1.Ds5hpA.NwElYUasKz3ydR_gBN_J7XXoOcY'
+with open("misc/thing.txt") as inFile:
+    TOKEN = inFile.readline().strip()
 
 client = commands.Bot(command_prefix='_')
 
