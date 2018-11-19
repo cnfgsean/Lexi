@@ -100,6 +100,9 @@
       <find>.</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -126,6 +129,7 @@
     <option name="width" value="1750" />
     <option name="height" value="970" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -279,7 +283,7 @@
       <window_info anchor="right" id="TODO" order="3" sideWeight="0.46248084" visible="true" weight="0.20104167" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5005208" side_tool="true" weight="0.3060574" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947917" visible="true" weight="0.3060574" />
       <window_info anchor="right" id="Structure" order="4" sideWeight="0.53751916" side_tool="true" visible="true" weight="0.20104167" />
