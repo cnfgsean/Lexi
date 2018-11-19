@@ -42,7 +42,9 @@ async def on_message(message):
     content = str(message.content).lower().strip().split()
     channel = message.channel
     if len(content) > 0 and str(author) != "Lexi#2892":
-        if content[0] == "lexi":
+        if " ".join(content) == "lexi do you want to sleep?":
+            await client.send_message(channel, "Yes")
+        elif content[0] == "lexi":
             if len(content) == 1:
                 await client.send_message(channel, "Hi, <@{}>!".format(author.id))
             elif content[1] == "should" or content[1] == "am" or content[1] == "will":
