@@ -44,12 +44,33 @@ class Games:
             await self.client.say("<@{}> : Guess which box I am thinking of!".format(player_id))
             await self.client.say("[:one:] [:two:] [:three:] [:four:] [:five:]")
             correct = random.randint(1, 5)
+            hint_chance = random.randint(1, 3)
+            if hint_chance == 2:
+                if correct % 2 == 0:
+                    num_type = "even"
+                else:
+                    num_type = "odd"
+                await self.client.say("I'm feeling pretty generous today!")
+                await self.client.say("<@{}> : The box is an {} number".format(player_id, num_type))
             mystery_box_queue[player_id] = [False, correct, False]  # Hasn't guessed, correct box, is guilty
             print(mystery_box_queue)
             for i in range(700):
                 await asyncio.sleep(0.01)
                 if mystery_box_queue[player_id][0]:
-                    await self.client.say("Wow! You're correct!")  # TODO add some noun in the mysterybox
+                    await self.client.say("Wow! You're correct!")
+                    await self.client.say("<@{}> : Give me some time to open it..".format(player_id))
+                    await asyncio.sleep(0.1)
+                    msg = await self.client.say(":package:")
+                    await asyncio.sleep(1.5)
+                    await self.client.edit_message(msg, ":hourglass_flowing_sand:")
+                    await asyncio.sleep(2.3)
+                    await self.client.edit_message(msg, ":hourglass:")
+                    await asyncio.sleep(1.9)
+                    await self.client.edit_message(msg, ":unlock:")
+                    reward = en.random_from_txt("texts/materials.txt")
+                    await self.client.say("<@{}> : O.O You just received a new {}!".format(player_id, reward))
+                    adj = en.random_from_txt("texts/positive_adjectives.txt").lower()
+                    await self.client.say("<@{}> : Your gift seems pretty {}. Pretty jealous tbh.".format(player_id, adj))
                     break
                 elif mystery_box_queue[player_id][2]:
                     break
@@ -85,9 +106,10 @@ class Games:
                     await self.client.send_message(channel, "Sorry, the correct box was number [{}].".format(ans))
                     mystery_box_queue[author_id][2] = True
         except ValueError:
-            mystery_box_queue[author_id][2] = True
-            await self.client.send_message(channel, "That doesn't make sense.")
-            await self.client.send_message(channel, "I guess you won't find out what's in the mystery box.")
+            if not mystery_box_queue[author_id][0]:
+                mystery_box_queue[author_id][2] = True
+                await self.client.send_message(channel, "That doesn't make sense.")
+                await self.client.send_message(channel, "I guess you won't find out what's in the mystery box.")
 
 
 def setup(client):
