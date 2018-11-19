@@ -5,10 +5,15 @@ import discord
 from discord.ext import commands
 import functions_en as en
 import random
+import asyncio
+
+mystery_box_queue = dict()
+
 
 class Games:
     def __init__(self, client):
         self.client = client
+
 
     @commands.command()
     async def opinion(self, *item):
@@ -29,6 +34,60 @@ class Games:
         else:
             await self.client.say("{} :arrow_right: {}".format(author, victim))
             await self.client.say("\n".join([line1, line2]))
+
+    @commands.command(pass_context=True)
+    async def mysterybox(self, ctx):
+        player = ctx.message.author
+        player_id = player.id
+        channel = ctx.message.channel
+        if player_id not in mystery_box_queue:
+            await self.client.say("<@{}> : Guess which box I am thinking of!".format(player_id))
+            await self.client.say("[:one:] [:two:] [:three:] [:four:] [:five:]")
+            correct = random.randint(1, 5)
+            mystery_box_queue[player_id] = [False, correct, False]  # Hasn't guessed, correct box, is guilty
+            print(mystery_box_queue)
+            for i in range(700):
+                await asyncio.sleep(0.01)
+                if mystery_box_queue[player_id][0]:
+                    await self.client.say("Wow! You're correct!")  # TODO add some noun in the mysterybox
+                    break
+                elif mystery_box_queue[player_id][2]:
+                    break
+            else:
+                await self.client.say("<@{}> : Time's up!".format(player_id))
+                await self.client.say("I guess you won't find out what's in the mystery box.")
+            mystery_box_queue.pop(player_id, None)
+            print(mystery_box_queue)
+        else:
+            await self.client.say("You're already guessing, <@{}>!".format(player_id))
+
+    async def on_message(self, message):
+        author = message.author
+        author_id = message.author.id
+        content = str(message.content)
+        channel = message.channel
+        try:
+            if author_id in mystery_box_queue.keys() and content != "_mysterybox":
+                if int(content) == mystery_box_queue[author_id][1]:
+                    mystery_box_queue[author_id][0] = True
+                    # put something that is in the box
+                else:
+                    if mystery_box_queue[author_id][1] == 1:
+                        ans = ":one:"
+                    elif mystery_box_queue[author_id][1] == 2:
+                        ans = ":two:"
+                    elif mystery_box_queue[author_id][1] == 3:
+                        ans = ":three:"
+                    elif mystery_box_queue[author_id][1] == 4:
+                        ans = ":four:"
+                    else:
+                        ans = ":five:"
+                    await self.client.send_message(channel, "Sorry, the correct box was number [{}].".format(ans))
+                    mystery_box_queue[author_id][2] = True
+        except ValueError:
+            mystery_box_queue[author_id][2] = True
+            await self.client.send_message(channel, "That doesn't make sense.")
+            await self.client.send_message(channel, "I guess you won't find out what's in the mystery box.")
 
 
 def setup(client):

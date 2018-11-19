@@ -3,6 +3,8 @@ import discord
 from discord.ext import commands
 import random
 import functions_en
+import asyncio
+import sys
 
 with open("misc/thing.txt") as inFile:
     TOKEN = inFile.readline().strip()
@@ -43,6 +45,12 @@ async def on_message(message):
         if content[0] == "lexi":
             if len(content) == 1:
                 await client.send_message(channel, "Hi, <@{}>!".format(author.id))
+            elif content[1] == "should" or content[1] == "am" or content[1] == "will":
+                chance = random.randint(1, 2)
+                if chance == 1:
+                    await client.send_message(channel, "I think so.")
+                else:
+                    await client.send_message(channel, "I don't think so.")
             else:  # sentence length more than 1
                 for word in bads:
                     if word[::-1] in content:
@@ -67,6 +75,7 @@ async def on_message(message):
                 await client.send_message(channel, "You probably shouldn't..")
 
     await client.process_commands(message)
+
 
 
 @client.event
