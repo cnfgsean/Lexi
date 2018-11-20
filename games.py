@@ -94,7 +94,7 @@ class Games:
             return
         if author_id not in madlibs_queue.keys():
             print(madlibs_queue)
-            script = en.random_from_txt("texts/mad_libs.txt", 4).split("&")
+            script = en.random_from_txt("texts/mad_libs.txt", 3).split("&")
             print(script)
             items = int(script[0])
             text = script[1].split()
@@ -226,7 +226,7 @@ class Games:
                 await self.client.send_message(channel, "Stopping and cancelling the madlibs game.")
                 await self.client.send_message(channel, "Try it again later, <@{}>!".format(author_id))
             elif madlibs_queue[author_id][1]:
-                madlibs_queue[author_id][4].append(content)
+                madlibs_queue[author_id][4].append("__" + content + "__")
                 madlibs_queue[author_id][2] -= 1
                 madlibs_queue[author_id][1] = False
 
