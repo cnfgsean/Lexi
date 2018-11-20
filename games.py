@@ -94,7 +94,7 @@ class Games:
             return
         if author_id not in madlibs_queue.keys():
             print(madlibs_queue)
-            script = en.random_from_txt("texts/mad_libs.txt", 3).split("&")
+            script = en.random_from_txt("texts/mad_libs.txt").split("&")
             print(script)
             items = int(script[0])
             text = script[1].split()
