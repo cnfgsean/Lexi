@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9e084ae-8b2d-4aa3-b645-14253c21f09d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/games.py" beforeDir="false" afterPath="$PROJECT_DIR$/games.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/texts/mad_libs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/texts/mad_libs.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +17,7 @@
       <file leaf-file-name="bot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="2520">
               <caret line="131" column="59" selection-start-line="131" selection-start-column="59" selection-end-line="131" selection-end-column="59" />
               <folding>
                 <element signature="e#10#24#0" expanded="true" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="custom_texts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/custom_texts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2374">
-              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+            <state relative-caret-position="300">
+              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
               <folding>
                 <element signature="e#55#69#0" expanded="true" />
               </folding>
@@ -43,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/misc/private_channel.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="57" lean-forward="true" selection-start-column="57" selection-end-column="57" />
+              <caret column="57" selection-start-column="57" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -51,7 +50,7 @@
       <file leaf-file-name="grammar.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grammar.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
+            <state relative-caret-position="660">
               <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
               <folding>
                 <element signature="e#73#87#0" expanded="true" />
@@ -63,8 +62,8 @@
       <file leaf-file-name="games.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/games.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="112" column="88" selection-start-line="112" selection-start-column="88" selection-end-line="112" selection-end-column="88" />
+            <state relative-caret-position="-510">
+              <caret line="139" column="48" selection-start-line="139" selection-start-column="48" selection-end-line="139" selection-end-column="48" />
               <folding>
                 <element signature="e#72#86#0" expanded="true" />
               </folding>
@@ -81,15 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitattributes" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitattributes">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file leaf-file-name="functions_en.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions_en.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="220">
               <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -101,7 +95,7 @@
       <file leaf-file-name="positive_adjectives.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/texts/positive_adjectives.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
+            <state relative-caret-position="38200">
               <caret line="1910" column="14" selection-start-line="1910" selection-start-column="14" selection-end-line="1910" selection-end-column="14" />
             </state>
           </provider>
@@ -132,7 +126,7 @@
       <find>on_message</find>
       <find>run</find>
       <find>mouse</find>
-      <find />
+      <find>positive adjectives</find>
       <find>.</find>
       <find>number_game_queue</find>
       <find />
@@ -335,41 +329,41 @@
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6049005" visible="true" weight="0.13958333" />
-      <window_info anchor="right" id="TODO" order="3" sideWeight="0.46165645" visible="true" weight="0.20104167" />
+      <window_info anchor="right" id="TODO" order="3" sideWeight="0.4601227" visible="true" weight="0.20104167" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.50104165" side_tool="true" weight="0.3060574" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.30712008" />
-      <window_info anchor="right" id="Structure" order="4" sideWeight="0.53834355" side_tool="true" visible="true" weight="0.20104167" />
+      <window_info anchor="right" id="Structure" order="4" sideWeight="0.5398773" side_tool="true" visible="true" weight="0.20104167" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32943678" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info active="true" anchor="right" id="TODO" order="3" visible="true" weight="0.17916666" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3060574" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="8" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -381,6 +375,16 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/games.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2160">
+          <caret line="112" column="88" selection-start-line="112" selection-start-column="88" selection-end-line="112" selection-end-column="88" />
+          <folding>
+            <element signature="e#72#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/texts/en_words.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9327920">
@@ -583,9 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -644,7 +645,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/texts/positive_adjectives.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
+        <state relative-caret-position="38200">
           <caret line="1910" column="14" selection-start-line="1910" selection-start-column="14" selection-end-line="1910" selection-end-column="14" />
         </state>
       </provider>
@@ -656,27 +657,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/texts/bubble_letters.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/texts/bubble_letters.txt" />
     <entry file="file://$PROJECT_DIR$/misc/private_channel.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="57" lean-forward="true" selection-start-column="57" selection-end-column="57" />
+          <caret column="57" selection-start-column="57" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/custom_texts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2374">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="300">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding>
             <element signature="e#55#69#0" expanded="true" />
           </folding>
@@ -685,7 +677,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions_en.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="220">
           <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -695,7 +687,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="2520">
           <caret line="131" column="59" selection-start-line="131" selection-start-column="59" selection-end-line="131" selection-end-column="59" />
           <folding>
             <element signature="e#10#24#0" expanded="true" />
@@ -705,7 +697,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grammar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
+        <state relative-caret-position="660">
           <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
           <folding>
             <element signature="e#73#87#0" expanded="true" />
@@ -722,8 +714,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/games.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="112" column="88" selection-start-line="112" selection-start-column="88" selection-end-line="112" selection-end-column="88" />
+        <state relative-caret-position="-510">
+          <caret line="139" column="48" selection-start-line="139" selection-start-column="48" selection-end-line="139" selection-end-column="48" />
           <folding>
             <element signature="e#72#86#0" expanded="true" />
           </folding>

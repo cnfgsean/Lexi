@@ -99,7 +99,7 @@ class Games:
             items = int(script[0])
             text = script[1].split()
             title = script[2]
-            madlibs_queue[author_id] = [False, False, items, [], []]  # finished, has asked, items left, prompts, answers
+            madlibs_queue[author_id] = [False, False, items, [], [], 0]  # finished, has asked, items left, prompts, answers, timer
             await self.client.say("Great choice, <@{}>! Let's begin.".format(author_id))
             await self.client.say("Say 'lexi stop' or one of my commands (i.e. _ping) if you wish to cancel.")
             await self.client.say("Note: You can use my _noun, _adj, _verb, or _adv commands if you are out of creativity.")
@@ -129,7 +129,8 @@ class Games:
                     else:
                         madlibs_queue[author_id][3].append("[anything! there seems to be something wrong with the code.]")
             print(madlibs_queue.keys())
-            for i in range(30000):
+            for madlibs_queue[author_id][5] in range(10000000):
+                # print(madlibs_queue[author_id][5])
                 await asyncio.sleep(0.01)
                 if madlibs_queue[author_id][2] > 0:
                     if not madlibs_queue[author_id][1]:  # if lexi hasn't asked
@@ -169,10 +170,10 @@ class Games:
                     await self.client.say(".\n".join(post_output))
                 if madlibs_queue[author_id][0]:
                     break
-            else:
-                await self.client.say("Can't make up your mind, <@{}>?".format(author_id))
-                await self.client.say("Stopping and cancelling the madlibs game.")
-                print("Time's up")
+                if madlibs_queue[author_id][5] == 9999999:
+                    await self.client.say("Can't make up your mind, <@{}>?".format(author_id))
+                    await self.client.say("Stopping and cancelling the madlibs game.")
+
             madlibs_queue.pop(author_id, None)
             print(madlibs_queue)
         else:
