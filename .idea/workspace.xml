@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9e084ae-8b2d-4aa3-b645-14253c21f09d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/texts/mad_libs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_texts.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_texts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions_en.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions_en.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/games.py" beforeDir="false" afterPath="$PROJECT_DIR$/games.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +20,8 @@
       <file leaf-file-name="bot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="93" selection-start-line="93" selection-end-line="93" />
+            <state relative-caret-position="452">
+              <caret line="57" column="119" selection-start-line="57" selection-start-column="119" selection-end-line="57" selection-end-column="119" />
               <folding>
                 <element signature="e#10#24#0" expanded="true" />
               </folding>
@@ -28,10 +29,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom_texts.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="custom_texts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/custom_texts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="-2374">
               <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
               <folding>
                 <element signature="e#55#69#0" expanded="true" />
@@ -61,14 +62,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="games.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="games.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/games.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="84" column="31" lean-forward="true" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
+            <state relative-caret-position="2423">
+              <caret line="160" column="63" selection-start-line="160" selection-start-column="63" selection-end-line="160" selection-end-column="63" />
               <folding>
                 <element signature="e#72#86#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mad_libs.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/texts/mad_libs.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="507" selection-start-column="507" selection-end-column="507" />
             </state>
           </provider>
         </entry>
@@ -81,8 +91,8 @@
       <file leaf-file-name="functions_en.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions_en.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="105" column="96" lean-forward="true" selection-start-line="105" selection-start-column="96" selection-end-line="105" selection-end-column="96" />
+            <state relative-caret-position="240">
+              <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -108,15 +118,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="yo_mamma.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/texts/yo_mamma.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -137,6 +138,8 @@
       <find>.</find>
       <find>number_game_queue</find>
       <find />
+      <find>~</find>
+      <find>%</find>
     </findStrings>
     <replaceStrings>
       <replace>a</replace>
@@ -157,21 +160,22 @@
         <option value="$PROJECT_DIR$/texts/positive_adjectives.txt" />
         <option value="$PROJECT_DIR$/texts/yo_momma.txt" />
         <option value="$PROJECT_DIR$/insults.py" />
-        <option value="$PROJECT_DIR$/functions_en.py" />
         <option value="$PROJECT_DIR$/grammar.py" />
         <option value="$PROJECT_DIR$/texts/negative_adjectives.txt" />
         <option value="$PROJECT_DIR$/misc/thing.txt" />
         <option value="$PROJECT_DIR$/texts/materials.txt" />
         <option value="$PROJECT_DIR$/.gitattributes" />
         <option value="$PROJECT_DIR$/texts/bubble_letters.txt" />
-        <option value="$PROJECT_DIR$/games.py" />
-        <option value="$PROJECT_DIR$/bot.py" />
         <option value="$PROJECT_DIR$/misc/private_channel.txt" />
         <option value="$PROJECT_DIR$/custom_texts.py" />
+        <option value="$PROJECT_DIR$/functions_en.py" />
+        <option value="$PROJECT_DIR$/bot.py" />
+        <option value="$PROJECT_DIR$/texts/mad_libs.txt" />
+        <option value="$PROJECT_DIR$/games.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-1506" />
     <option name="y" value="-9" />
     <option name="width" value="1750" />
@@ -329,17 +333,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6049005" visible="true" weight="0.13958333" />
-      <window_info anchor="right" id="TODO" order="3" sideWeight="0.4617737" visible="true" weight="0.20104167" />
+      <window_info anchor="right" id="TODO" order="3" sideWeight="0.46165645" visible="true" weight="0.20104167" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.50104165" side_tool="true" weight="0.3060574" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.30499467" />
-      <window_info anchor="right" id="Structure" order="4" sideWeight="0.5382263" side_tool="true" visible="true" weight="0.20104167" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.30712008" />
+      <window_info anchor="right" id="Structure" order="4" sideWeight="0.53834355" side_tool="true" visible="true" weight="0.20104167" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32943678" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -379,16 +383,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/poem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1220">
-          <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/texts/en_words.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9327920">
@@ -657,16 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions_en.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="105" column="96" lean-forward="true" selection-start-line="105" selection-start-column="96" selection-end-line="105" selection-end-column="96" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/texts/materials.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -701,32 +685,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/custom_texts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2374">
+          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding>
+            <element signature="e#55#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions_en.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        <state relative-caret-position="452">
+          <caret line="57" column="119" selection-start-line="57" selection-start-column="119" selection-end-line="57" selection-end-column="119" />
           <folding>
             <element signature="e#10#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/games.py">
+    <entry file="file://$PROJECT_DIR$/texts/mad_libs.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="84" column="31" lean-forward="true" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
-          <folding>
-            <element signature="e#72#86#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="507" selection-start-column="507" selection-end-column="507" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/custom_texts.py">
+    <entry file="file://$PROJECT_DIR$/games.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="2423">
+          <caret line="160" column="63" selection-start-line="160" selection-start-column="63" selection-end-line="160" selection-end-column="63" />
           <folding>
-            <element signature="e#55#69#0" expanded="true" />
+            <element signature="e#72#86#0" expanded="true" />
           </folding>
         </state>
       </provider>

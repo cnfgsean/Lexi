@@ -42,12 +42,10 @@ async def on_message(message):
     content = str(message.content).lower().strip().split()
     channel = message.channel
     if len(content) > 0 and str(author) != "Lexi#2892":
-        if " ".join(content) == "lexi do you want to sleep?":
-            await client.send_message(channel, "Yes")
-        elif content[0] == "lexi":
+        if content[0] == "lexi":
             if len(content) == 1:
                 await client.send_message(channel, "Hi, <@{}>!".format(author.id))
-            elif content[1] == "should" or content[1] == "am" or content[1] == "will":
+            elif content[1] == "should" or content[1] == "am" or content[1] == "will" or content[1] == "is":
                 chance = random.randint(1, 2)
                 if chance == 1:
                     await client.send_message(channel, "I think so.")
@@ -58,7 +56,6 @@ async def on_message(message):
                     if word[::-1] in content:
                         adj = functions_en.random_from_txt("texts/negative_adjectives.txt").lower()
                         await client.send_message(channel, "Hey, <@{}>, that sounds pretty {}.".format(author.id, adj))
-                await client.send_message(channel, "What do you want me to say?")
         elif content[0] == "yes":
             await client.send_message(channel, "indeed.")
         elif content[0] == "maybe":
@@ -75,9 +72,10 @@ async def on_message(message):
                 await client.send_message(channel, "Alexa, answer <@{}>'s doubts.".format(author.id))
             elif chance == 6:
                 await client.send_message(channel, "You probably shouldn't..")
+        elif content[0] == "welp" or (content[0] == "oh" and content[1] == "well"):
+            await client.send_message(channel, "¯\_(ツ)_/¯")
 
     await client.process_commands(message)
-
 
 
 @client.event

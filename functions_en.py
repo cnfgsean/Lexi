@@ -8,11 +8,11 @@ def random_from_txt(file, index=None):
         for _ in inFile:
             lines += 1
         if not index:
-            ind = random.randint(1, lines + 1)
+            ind = random.randint(1, lines)
         else:
             ind = index
         inFile.seek(0)
-        for i in range(1, lines):
+        for i in range(1, lines + 1):
             word = inFile.readline()
             if i == ind:
                 return word.strip()
