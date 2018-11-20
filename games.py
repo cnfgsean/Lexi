@@ -94,7 +94,7 @@ class Games:
             return
         if author_id not in madlibs_queue.keys():
             print(madlibs_queue)
-            script = en.random_from_txt("texts/mad_libs.txt").split("&")
+            script = en.random_from_txt("texts/mad_libs.txt", 4).split("&")
             print(script)
             items = int(script[0])
             text = script[1].split()
@@ -118,12 +118,16 @@ class Games:
                         madlibs_queue[author_id][3].append("plural noun")
                     elif word[0] == "%verb":
                         madlibs_queue[author_id][3].append("verb")
+                    elif word[0] == "%verb_s":
+                        madlibs_queue[author_id][3].append("verb ending with 's'")
                     elif word[0] == "%verb_ing":
                         madlibs_queue[author_id][3].append("verb ending with 'ing'")
                     elif word[0] == "%body_part":
                         madlibs_queue[author_id][3].append("body part")
                     elif word[0] == "%adjective":
                         madlibs_queue[author_id][3].append("adjective")
+                    elif word[0] == "%adverb":
+                        madlibs_queue[author_id][3].append("adverb")
                     elif word[0] == "%name_female":
                         madlibs_queue[author_id][3].append("female name")
                     else:
