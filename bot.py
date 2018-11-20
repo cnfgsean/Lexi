@@ -105,12 +105,12 @@ async def help(ctx):
 
     embed.set_author(name="Here's what I know:\n")
 
-    embed.add_field(name="======================| General |======================", value="Some basic, generic commands", inline=False)
+    embed.add_field(name="======================| **General** |======================", value="Some basic, generic commands", inline=False)
     embed.add_field(name="[:grey_question:] _help", value="displays this message", inline=True)
     embed.add_field(name="[:ping_pong:] _ping", value="Pong!", inline=True)
     embed.add_field(name="[:speech_balloon:] _echo (message)", value="echoes the message back", inline=False)
 
-    embed.add_field(name="====================| Custom Texts |====================", value="Use these commands to generate custom messages!", inline=False)
+    embed.add_field(name="====================| **Custom Texts** |====================", value="Use these commands to generate custom messages!", inline=False)
     embed.add_field(name="[:arrow_backward:] _reverse (message)", value="reverses the word order in a sentence", inline=True)
     embed.add_field(name="[:arrow_left:] _reverseall (message)", value="reverses every letter in a sentence", inline=True)
     embed.add_field(name="[:game_die:] _shuffle (message)", value="randomizes the word order \n in a sentence", inline=True)
@@ -121,7 +121,7 @@ async def help(ctx):
                     "set the tts variable to 'tts' if you want text to speech. otherwise, leave it empty.",
                     inline=True)
 
-    embed.add_field(name="======================| Grammar |======================",
+    embed.add_field(name="======================| **Grammar** |======================",
                     value="Here are some commands pertaining to English grammar.", inline=False)
     embed.add_field(name="[:small_blue_diamond:] _adj ([syllables?])", value="here's a random adjective!", inline=True)
     embed.add_field(name="[:small_blue_diamond:] _adv ([syllables?])", value="here's a random adverb!", inline=True)
@@ -129,10 +129,11 @@ async def help(ctx):
     embed.add_field(name="[:small_blue_diamond:] _verb ([syllables?])", value="here's a random verb!", inline=True)
     embed.add_field(name="[:closed_book:] _isword (word)", value="check to see if the word is an English word.", inline=True)
 
-    embed.add_field(name="=======================| Fun! |=======================", value="It looks like my game packages have shipped with me too!", inline=False)
+    embed.add_field(name="=======================| **Fun!** |=======================", value="It looks like my game packages have shipped with me too!", inline=False)
     embed.add_field(name="[:raising_hand:] _opinion (word)", value="what do you think about something? \n what do you think lexi thinks about something?", inline=True)
     embed.add_field(name="[:point_right:] _yomamma @(user)", value="can't think of a good insult? I gotcha.", inline=True)
-    embed.add_field(name="[:package:] _mysterybox", value="feeling lucky? good guesser?", inline=True)
+    embed.add_field(name="[:package:] _mysterybox", value="feeling lucky? \n or are you just a good guesser?", inline=True)
+    embed.add_field(name="[:pencil:] _madlibs", value="got some extra words to fill in? \n hope you brought your humor, too!", inline=True)
 
     embed.set_footer(text="Note: [asdf?]: this indicates an optional* value for a command")
 
@@ -140,7 +141,7 @@ async def help(ctx):
     await client.send_message(channel, "<@{}>, here's some literature!".format(author_id))
     await client.send_message(author, "Glad you asked!")
     await client.send_message(author, embed=embed)
-    await client.send_message(author, "Feel free to test these commands in this conversation!")
+    await client.send_message(author, "**Feel free to test these commands in this conversation!**")
 
 
 @client.command()

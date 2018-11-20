@@ -95,6 +95,7 @@ class Games:
         if author_id not in madlibs_queue.keys():
             print(madlibs_queue)
             script = en.random_from_txt("texts/mad_libs.txt").split("&")
+            print(script)
             items = int(script[0])
             text = script[1].split()
             title = script[2]
@@ -109,7 +110,7 @@ class Games:
                 word = i.split("~")
                 if word[0][0] == "%":
                     """
-                    noun, plural_noun, verb, verb_ing, body_part
+                    noun, plural_noun, verb, verb_ing, body_part, adjective, name_female
                     """
                     if word[0] == "%noun":
                         madlibs_queue[author_id][3].append("noun")
@@ -121,12 +122,18 @@ class Games:
                         madlibs_queue[author_id][3].append("verb ending with 'ing'")
                     elif word[0] == "%body_part":
                         madlibs_queue[author_id][3].append("body part")
+                    elif word[0] == "%adjective":
+                        madlibs_queue[author_id][3].append("adjective")
+                    elif word[0] == "%name_female":
+                        madlibs_queue[author_id][3].append("female name")
+                    else:
+                        madlibs_queue[author_id][3].append("[anything! there seems to be something wrong with the code.]")
             print(madlibs_queue.keys())
             for i in range(30000):
                 await asyncio.sleep(0.01)
                 if madlibs_queue[author_id][2] > 0:
                     if not madlibs_queue[author_id][1]:  # if lexi hasn't asked
-                        await self.client.say("**{}** more word(s) left. <@{}>, can you give me a {}?".format(madlibs_queue[author_id][2], author_id, madlibs_queue[author_id][3][items - madlibs_queue[author_id][2]]))
+                        await self.client.say("**{}** more word(s) left. <@{}>, can you give me a(n) {}?".format(madlibs_queue[author_id][2], author_id, madlibs_queue[author_id][3][items - madlibs_queue[author_id][2]]))
                         madlibs_queue[author_id][1] = True
                 else:
                     madlibs_queue[author_id][0] = True
