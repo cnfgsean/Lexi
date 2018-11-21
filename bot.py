@@ -72,7 +72,7 @@ async def on_message(message):
                 await client.send_message(channel, "Alexa, answer <@{}>'s doubts.".format(author.id))
             elif chance == 6:
                 await client.send_message(channel, "You probably shouldn't..")
-        elif content[0] == "welp" or (content[0] == "oh" and content[1] == "well"):
+        elif content[0] == "welp" or (len(content) == 2 and (content[0] == "oh" and content[1] == "well")):
             await client.send_message(channel, "¯\_(ツ)_/¯")
 
     await client.process_commands(message)
@@ -89,6 +89,17 @@ async def on_message_delete(message):
     content = message.content
     channel = message.channel
     await client.send_message(channel, "Woah, <@{}> deleted a message o.o".format(author_id))
+
+
+@client.command(pass_context=True)
+async def cancel(ctx):
+    channel = ctx.message.channel
+    await client.send_message(channel, "Cancelling!")
+
+
+@client.command(pass_context=True)
+async def ignore(ctx):
+    pass
 
 
 @client.command(pass_context=True)
@@ -133,7 +144,8 @@ async def help(ctx):
     embed.add_field(name="[:raising_hand:] _opinion (word)", value="what do you think about something? \n what do you think lexi thinks about something?", inline=True)
     embed.add_field(name="[:point_right:] _yomamma @(user)", value="can't think of a good insult? I gotcha.", inline=True)
     embed.add_field(name="[:package:] _mysterybox", value="feeling lucky? \n or are you just a good guesser?", inline=True)
-    embed.add_field(name="[:pencil:] _madlibs", value="got some extra words to fill in? \n hope you brought your humor, too!", inline=True)
+    embed.add_field(name="[:pencil:] _madlibs", value="got some extra words to fill in? \n hope you also brought your humor!", inline=True)
+    embed.add_field(name="[:scissors:] _rps (rock, paper, or scissors)", value="yeah, I know how to play rock paper scissors, too!", inline=True)
 
     embed.set_footer(text="Note: [asdf?]: this indicates an optional* value for a command")
 

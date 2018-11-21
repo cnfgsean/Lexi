@@ -10,10 +10,10 @@ import asyncio
 mystery_box_queue = dict()
 madlibs_queue = dict()
 
+
 class Games:
     def __init__(self, client):
         self.client = client
-
 
     @commands.command()
     async def opinion(self, *item):
@@ -21,6 +21,80 @@ class Games:
         print(item)
         verdict = en.will_like(item)
         await self.client.say("\n".join(verdict))
+
+    @commands.command(pass_context=True)
+    async def rps(self, ctx, choice=None):
+        author = ctx.message.author
+        author_id = author.id
+        valid_choices = [
+            ["rock", "r", "1"],
+            ["paper", "p", "2"],
+            ["scissors", "s", "3"]
+        ]
+        choice = str(choice).lower()
+        # picking the user's choice
+        if choice in valid_choices[0]:
+            choice = 1
+        elif choice in valid_choices[1]:
+            choice = 2
+        elif choice in valid_choices[2]:
+            choice = 3
+        else:
+            await self.client.say("<@{}> : I'm not sure that's a valid choice.".format(author_id))
+            await self.client.say("I'll just pick something for you, then!")
+            item_chance = random.randint(1, 3)
+            if item_chance == 1:
+                choice = 1
+            elif item_chance == 2:
+                choice = 2
+            else:
+                choice = 3
+
+        # picking the bot's choice
+        lexi_choice = random.randint(1, 3)
+
+        # picking the emojis
+        if choice == 1:
+            emoji = ":fist:"
+            literal = "rock"
+        elif choice == 2:
+            emoji = ":hand_splayed:"
+            literal = "paper"
+        else:
+            emoji = ":v:"
+            literal = "scissors"
+
+        # picking the emojis
+        if lexi_choice == 1:
+            lexi_emoji = ":fist:"
+            lexi_literal = "rock"
+        elif lexi_choice == 2:
+            lexi_emoji = ":hand_splayed:"
+            lexi_literal = "paper"
+        else:
+            lexi_emoji = ":v:"
+            lexi_literal = "scissors"
+
+        # comparing choices
+        embed = discord.Embed(
+            color=discord.Color.dark_teal()
+        )
+        if ctx.message.server:
+            user = ctx.message.server.get_member(author_id)
+            pfp = user.avatar_url
+            embed.set_author(name="{}'s match".format(str(author).split("#")[0]), icon_url=pfp)
+        if choice == lexi_choice:  # P L   1, 1   2, 2   3, 3
+            embed.add_field(name="*Here are the results!*", value="<@{}>   **{}** {} :left_right_arrow: {} **{}**   <@512442583142760465>".format(author_id, literal, emoji, lexi_emoji, lexi_literal), inline=False)
+            await self.client.say(embed=embed)
+            await self.client.say("<@{}> : Looks like it's a tie!".format(author_id))
+        elif (choice == 1 and lexi_choice == 2) or (choice == 2 and lexi_choice == 3) or(choice == 3 and lexi_choice == 1):  # P L   1, 2   2, 3   3, 1  Lexi wins
+            embed.add_field(name="*Here are the results!*", value="<@{}>   **{}** {} :arrow_left::arrow_left: {} **{}**   <@512442583142760465>".format(author_id, literal, emoji, lexi_emoji, lexi_literal), inline=False)
+            await self.client.say(embed=embed)
+            await self.client.say("<@{}> : Looks like I win!".format(author_id))
+        else:  # P L   1, 3   3,2   2,1
+            embed.add_field(name="*Here are the results!*", value="<@{}>   **{}** {} :arrow_right::arrow_right: {} **{}**   <@512442583142760465>".format(author_id, literal, emoji, lexi_emoji, lexi_literal), inline=False)
+            await self.client.say(embed=embed)
+            await self.client.say("<@{}> : Looks like you win Congrats!!".format(author_id))
 
     @commands.command(pass_context=True)
     async def yomamma(self, ctx, victim=None):
@@ -94,15 +168,16 @@ class Games:
             return
         if author_id not in madlibs_queue.keys():
             print(madlibs_queue)
-            script = en.random_from_txt("texts/mad_libs.txt").split("&")
+            script = en.random_from_txt("texts/mad_libs.txt").split("&")  # TODO for manual changing
             print(script)
             items = int(script[0])
             text = script[1].split()
             title = script[2]
             madlibs_queue[author_id] = [False, False, items, [], [], 0]  # finished, has asked, items left, prompts, answers, timer
             await self.client.say("Great choice, <@{}>! Let's begin.".format(author_id))
-            await self.client.say("Say 'lexi stop' or one of my commands (i.e. _ping) if you wish to cancel.")
-            await self.client.say("Note: You can use my _noun, _adj, _verb, or _adv commands if you are out of creativity.")
+            await self.client.say("Say **lexi stop**, **_cancel**, or one of my commands (i.e. _ping) if you wish to cancel.")
+            await self.client.say("Note: You can use **_ignore (message that I will ignore)** if you want to talk to other people while you are playing.")
+            await self.client.say("Seems like my random choice picked **{}** for you madlibs!".format(title))
             # print(items)
             # print(text)
             # print(madlibs_queue)
@@ -217,11 +292,13 @@ class Games:
             if content[0] == "_":
                 if content == "_noun" or content == "_adj" or content == "_adv" or content == "_verb":
                     pass
+                elif content[0:7] == "_ignore":
+                    pass
                 else:
                     madlibs_queue[author_id][0] = True
                     await self.client.send_message(channel, "I see you tried using a command.")
                     await self.client.send_message(channel, "<@{}> : Madlibs cancelled.".format(author_id))
-            elif content == "lexi stop":
+            elif content == "lexi stop" or content == "Lexi stop":
                 madlibs_queue[author_id][0] = True
                 await self.client.send_message(channel, "Stopping and cancelling the madlibs game.")
                 await self.client.send_message(channel, "Try it again later, <@{}>!".format(author_id))
