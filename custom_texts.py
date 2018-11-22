@@ -105,6 +105,34 @@ class CustomTexts:
             await self.client.say(" ".join(arr))
 
     @commands.command()
+    async def boxy(self, *args):
+        arr = []
+        for i in args:
+            arr.append(i)
+        if len(arr) == 0:
+            await self.client.say("Can you give me something to make boxy?")
+        else:
+            s = " ".join(arr)
+            output = ""
+            for i in s:
+                if i == " ":
+                    output += ":black_small_square:"
+                elif i.isalpha():
+                    i = i.lower()
+                    emoji = ":regional_indicator_{}:".format(i)
+                    output += emoji
+                elif i == "!":
+                    output += ":exclamation:"
+                elif i == "?":
+                    output += ":question:"
+                elif i == ".":
+                    output += ":record_button:"
+                else:
+                    output += i
+
+            await self.client.say(output)
+
+    @commands.command()
     async def rant(self, subject="?", lines=None, tts=None):
         if not lines:
             lines = 4

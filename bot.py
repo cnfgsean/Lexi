@@ -126,7 +126,8 @@ async def help(ctx):
     embed.add_field(name="[:arrow_left:] _reverseall (message)", value="reverses every letter in a sentence", inline=True)
     embed.add_field(name="[:game_die:] _shuffle (message)", value="randomizes the word order \n in a sentence", inline=True)
     embed.add_field(name="[:twisted_rightwards_arrows:] _shuffleall (message)", value="randomizes the letters of each word \n in a sentence", inline=True)
-    embed.add_field(name="[:fire:] _shufflechaos (message)", value="randomizes the letters of each word and sentence order", inline=True)
+    embed.add_field(name="[:fire:] _shufflechaos (message)", value="randomizes the letters of each \n word and sentence order", inline=True)
+    embed.add_field(name="[:regional_indicator_a:] _boxy (message)", value="converts your message using letter emojis", inline=True)
     embed.add_field(name="[:lips:] _rant ([topic?], [lines?], [tts?])", value="apparently self-generated poems become off topic extremely quickly. \n"
                     "set the topic to '?' or empty for a randomly generated topic. \n "
                     "set the tts variable to 'tts' if you want text to speech. otherwise, leave it empty.",
