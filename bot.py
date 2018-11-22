@@ -78,19 +78,6 @@ async def on_message(message):
     await client.process_commands(message)
 
 
-@client.event
-async def on_message_delete(message):
-    """
-    Event whenever a message is deleted
-    :param message:
-    :return:
-    """
-    author_id = message.author.id
-    content = message.content
-    channel = message.channel
-    await client.send_message(channel, "Woah, <@{}> deleted a message o.o".format(author_id))
-
-
 @client.command(pass_context=True)
 async def cancel(ctx):
     channel = ctx.message.channel
