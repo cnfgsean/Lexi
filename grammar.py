@@ -62,7 +62,6 @@ class Grammar:
             await self.client.say("Correct usage: _adv syllables(1 to 4)")
             await self.client.say("Example: _adv 2")
 
-
     @commands.command()
     async def noun(self, syllables=None):
         if not syllables:
@@ -84,7 +83,6 @@ class Grammar:
             await self.client.say("That doesn't seem right.")
             await self.client.say("Correct usage: _noun syllables(1 to 4)")
             await self.client.say("Example: _noun 4")
-
 
     @commands.command()
     async def verb(self, syllables=None):

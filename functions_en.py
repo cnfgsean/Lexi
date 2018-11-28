@@ -81,6 +81,10 @@ def new_verb(syllables):
 def will_like(phrase):
     length = len(phrase)
     alpha_index = 50
+    auto_likes = ["sean", "lexi", "music", "robots", "bots", "randombot"]
+    if "".join(phrase).lower() in auto_likes:
+        adj = random_from_txt("texts/positive_adjectives.txt").lower()
+        return ["I already like {}.".format("".join(phrase)), "I already know that is {}.".format(adj)]
     for word in phrase:
         for letter in word.strip().lower():
             if letter.isalpha():
@@ -107,9 +111,9 @@ def will_like(phrase):
         if response == 1:
             return ["I really like {}.".format(" ".join(phrase)), "That stuff is pretty {}. 10/10".format(adj)]
         elif response == 2:
-            return ["I absolutely love {}.".format(" ".join(phrase)), "I would rate {} 11/10.".format(adj)]
+            return ["I absolutely love {}.".format(" ".join(phrase)), "I would rate it very {}.".format(adj)]
         else:
-            return ["I absolutely love {}.".format(" ".join(phrase)), "I would rate {} 11/10.".format(adj)]
+            return ["I absolutely love {}.".format(" ".join(phrase)), "I would rate it being {}".format(adj)]
     elif liking == 1:
         adj = random_from_txt("texts/positive_adjectives.txt", (total_index % 1925) + 1).lower()
         if response == 1:
