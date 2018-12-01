@@ -6,9 +6,17 @@ from discord.ext import commands
 import functions_en as en
 import random
 import asyncio
+import json
 
 mystery_box_queue = dict()
 madlibs_queue = dict()
+ispy_ref = dict()
+ispy_topics = [
+    ["https://github.com/cnfgsean/Lexi/blob/master/ispy/pexels-photo-1643324.jpeg?raw=true",
+     [[["sweet"], ["strawberry"]],
+      [["circular"], ["lemon"]]]
+     ]
+]
 
 
 class Games:
@@ -259,6 +267,43 @@ class Games:
             await self.client.say("<@{}>, you're already playing!".format(author_id))
 
     # TODO: add a countries game!
+    @commands.command(pass_context=True)
+    async def ispy(self, ctx):
+        channel = ctx.message.channel
+        content = ctx.message.content
+        server = ctx.message.server
+        if (server, channel) in ispy_ref.keys():
+            if str(content) == "_ispy new":
+                ispy_ref.pop((server, channel), None)
+            elif str(content) == "_ispy show":
+                embed = discord.Embed(
+                    title="Here it is again!",
+                    color=discord.Color.dark_teal()
+                )
+                ispy_hint = ispy_ref[(server, channel)][1][0]
+                ispy_image = ispy_ref[(server, channel)][0]
+                print(ispy_hint, ispy_image)
+                embed.add_field(name="Topic:", value="I spy with my digital eye something " + ispy_hint)
+                embed.set_image(url=ispy_image)
+                await self.client.say(embed=embed)
+            else:
+                await self.client.say("There already is an ispy game in this channel!")
+        if (server, channel) not in ispy_ref.keys():
+            ispy_topic = random.choice(ispy_topics)  # TODO: incorporate answer in the mass array
+            ispy_image = ispy_topic[0]
+            ispy_choice = random.choice(ispy_topic[1])
+            ispy_hint = ispy_choice[0]
+            ispy_answer = ispy_choice[1]
+            embed = discord.Embed(
+                title="Good luck!",
+                color=discord.Color.dark_teal()
+            )
+            embed.add_field(name="Topic:", value="I spy with my digital eye something " + ispy_hint[0])
+            embed.set_image(url=ispy_image)
+            await self.client.say(embed=embed)
+            ispy_ref[(server, channel)] = [ispy_image, ispy_hint, ispy_answer]  # URL, embed
+            print(ispy_choice)
+            print(ispy_ref)
 
     async def on_message(self, message):
         author = message.author
