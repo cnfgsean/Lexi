@@ -15,6 +15,10 @@ ispy_topics = [
     ["https://github.com/cnfgsean/Lexi/blob/master/ispy/pexels-photo-1643324.jpeg?raw=true",
      [[["sweet"], ["strawberry"]],
       [["circular"], ["lemon"]]]
+     ],
+    ["https://github.com/cnfgsean/Lexi/blob/master/ispy/pexels-photo-1643324.jpeg?raw=true",
+     [[["sweet"], ["strawberry"]],
+      [["circular"], ["lemon"]]]
      ]
 ]
 
@@ -272,22 +276,62 @@ class Games:
         channel = ctx.message.channel
         content = ctx.message.content
         server = ctx.message.server
+        if str(content).split()[0:2] == "_ispy help".split():
+            desc = discord.Embed(
+                title=":mag_right: I-SPY commands",
+                color=discord.Color.dark_teal()
+            )
+            desc.add_field(name="_ispy new (alt. _ispy restart)", value="Creates a new ispy game", inline=False)
+            desc.add_field(name="_ispy help", value="Displays this message", inline=False)
+            desc.add_field(name="_ispy cancel", value="Cancels your ispy game", inline=False)
+            desc.add_field(name="_ispy show", value="Shows the image again and your incorrect guesses", inline=False)
+            desc.add_field(name="_ispy guess (word)", value="Guess for the word", inline=False)
+            await self.client.say(embed=desc)
+            return
         if (server, channel) in ispy_ref.keys():
-            if str(content) == "_ispy new":
+            if str(content).split()[0:2] == "_ispy new".split() or str(content).split()[0:2] == "_ispy restart".split():
                 ispy_ref.pop((server, channel), None)
-            elif str(content) == "_ispy show":
+            elif str(content).split()[0:2] == "_ispy cancel".split():
+                ispy_ref[(server, channel)][3] = True
+                await self.client.say("Okay, thanks for playing, anyways!")
+            elif str(content).split()[0:2] == "_ispy show".split():
                 embed = discord.Embed(
                     title="Here it is again!",
                     color=discord.Color.dark_teal()
                 )
                 ispy_hint = ispy_ref[(server, channel)][1][0]
                 ispy_image = ispy_ref[(server, channel)][0]
-                print(ispy_hint, ispy_image)
-                embed.add_field(name="Topic:", value="I spy with my digital eye something " + ispy_hint)
+                incorrects = ispy_ref[(server, channel)][4]
+                print(ispy_ref)
+                embed.add_field(name="I spy with my digital eye something __{}__".format(ispy_hint),
+                                value="**Use `_ispy guess (word)` without the parentheses to guess!**")
                 embed.set_image(url=ispy_image)
+                embed.add_field(name="Incorrect guesses:", value=str(incorrects), inline=False)
+                embed.add_field(name="Your previous guesses:", value=" | ".join(ispy_ref[(server, channel)][5]))
+                embed.set_footer(text="Use _ispy help for a list of commands.")
                 await self.client.say(embed=embed)
+            elif str(content).split()[0:2] == "_ispy guess".split():
+                answer = ispy_ref[(server, channel)][2]
+                if len(str(content).lower().split()) == 2:
+                    await self.client.say("What kind of guess is that?")
+                    return
+                if " ".join(str(content).lower().split()[2:]) in answer:
+                    await self.client.say("<@{}> : You got it! It is a _{}_.".format(ctx.message.author.id, " ".join(str(content).lower().split()[2:])))
+                    ispy_ref[(server, channel)][3] = True
+                else:
+                    ispy_ref[(server, channel)][4] += 1
+                    ispy_ref[(server, channel)][5].append(" ".join(str(content).lower().split()[2:]))
+                    response = random.randint(1, 4)
+                    if response == 1:
+                        await self.client.say("Definitely not a {}.".format(" ".join(str(content).lower().split()[2:])))
+                    elif response == 2:
+                        await self.client.say("Incorrect. It's not a {}.".format(" ".join(str(content).lower().split()[2:])))
+                    elif response == 3:
+                        await self.client.say("Do you really think I would think it's a {}?".format(" ".join(str(content).lower().split()[2:])))
+                    else:
+                        await self.client.say("A {} is not correct. Try again.".format(" ".join(str(content).lower().split()[2:])))
             else:
-                await self.client.say("There already is an ispy game in this channel!")
+                await self.client.say("That doesn't make sense. Use `_ispy help` for a list of commands.")
         if (server, channel) not in ispy_ref.keys():
             ispy_topic = random.choice(ispy_topics)  # TODO: incorporate answer in the mass array
             ispy_image = ispy_topic[0]
@@ -298,11 +342,16 @@ class Games:
                 title="Good luck!",
                 color=discord.Color.dark_teal()
             )
-            embed.add_field(name="Topic:", value="I spy with my digital eye something " + ispy_hint[0])
+            embed.add_field(name="I spy with my digital eye something __{}__".format(ispy_hint[0]),
+                            value="*Use `_ispy guess (word)` without the parentheses to guess!*")
             embed.set_image(url=ispy_image)
+            embed.set_footer(text="Use _ispy help for a list of commands.")
             await self.client.say(embed=embed)
-            ispy_ref[(server, channel)] = [ispy_image, ispy_hint, ispy_answer]  # URL, embed
+            ispy_ref[(server, channel)] = [ispy_image, ispy_hint, ispy_answer, False, 0, [":"]]  # URL, hint, answer, finished, incorrect guesses count, incorrect list
             print(ispy_choice)
+            print(ispy_ref)
+        if ispy_ref[(server, channel)][3]:
+            ispy_ref.pop((server, channel), None)
             print(ispy_ref)
 
     async def on_message(self, message):
