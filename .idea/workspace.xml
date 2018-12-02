@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9e084ae-8b2d-4aa3-b645-14253c21f09d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom_texts.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_texts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/games.py" beforeDir="false" afterPath="$PROJECT_DIR$/games.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +18,8 @@
       <file leaf-file-name="bot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+            <state relative-caret-position="235">
+              <caret line="86" column="22" lean-forward="true" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
               <folding>
                 <element signature="e#10#24#0" expanded="true" />
               </folding>
@@ -29,8 +30,8 @@
       <file leaf-file-name="custom_texts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/custom_texts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3440">
-              <caret line="177" column="14" selection-start-line="177" selection-start-column="14" selection-end-line="177" selection-end-column="14" />
+            <state relative-caret-position="214">
+              <caret line="179" column="14" selection-start-line="179" selection-start-column="14" selection-end-line="179" selection-end-column="14" />
               <folding>
                 <element signature="e#55#69#0" expanded="true" />
               </folding>
@@ -62,8 +63,8 @@
       <file leaf-file-name="games.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/games.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+            <state relative-caret-position="480">
+              <caret line="52" column="54" lean-forward="true" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
               <folding>
                 <element signature="e#72#86#0" expanded="true" />
               </folding>
@@ -74,7 +75,7 @@
       <file leaf-file-name="functions_en.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions_en.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1560">
+            <state relative-caret-position="-96">
               <caret line="79" selection-start-line="79" selection-end-line="79" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -159,10 +160,10 @@
         <option value="$PROJECT_DIR$/texts/bubble_letters.txt" />
         <option value="$PROJECT_DIR$/misc/private_channel.txt" />
         <option value="$PROJECT_DIR$/texts/mad_libs.txt" />
-        <option value="$PROJECT_DIR$/custom_texts.py" />
         <option value="$PROJECT_DIR$/grammar.py" />
-        <option value="$PROJECT_DIR$/bot.py" />
         <option value="$PROJECT_DIR$/functions_en.py" />
+        <option value="$PROJECT_DIR$/custom_texts.py" />
+        <option value="$PROJECT_DIR$/bot.py" />
         <option value="$PROJECT_DIR$/games.py" />
       </list>
     </option>
@@ -324,8 +325,8 @@
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.2646121" />
-      <window_info anchor="right" id="Structure" order="4" sideWeight="0.54913294" side_tool="true" visible="true" weight="0.16666667" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.2646121" />
+      <window_info active="true" anchor="right" id="Structure" order="4" sideWeight="0.54913294" side_tool="true" visible="true" weight="0.16666667" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32943678" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -648,30 +649,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/custom_texts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3440">
-          <caret line="177" column="14" selection-start-line="177" selection-start-column="14" selection-end-line="177" selection-end-column="14" />
-          <folding>
-            <element signature="e#55#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/random.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1384">
           <caret line="748" selection-start-line="748" selection-end-line="748" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions_en.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,20 +673,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/functions_en.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-96">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+        <state relative-caret-position="235">
+          <caret line="86" column="22" lean-forward="true" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
           <folding>
             <element signature="e#10#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/custom_texts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="179" column="14" selection-start-line="179" selection-start-column="14" selection-end-line="179" selection-end-column="14" />
+          <folding>
+            <element signature="e#55#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/games.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="480">
+          <caret line="52" column="54" lean-forward="true" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
           <folding>
             <element signature="e#72#86#0" expanded="true" />
           </folding>

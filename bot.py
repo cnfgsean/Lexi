@@ -80,8 +80,7 @@ async def on_message(message):
 
 @client.command(pass_context=True)
 async def cancel(ctx):
-    channel = ctx.message.channel
-    await client.send_message(channel, "Cancelling!")
+    pass
 
 
 @client.command(pass_context=True)

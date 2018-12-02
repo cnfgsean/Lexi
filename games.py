@@ -11,14 +11,50 @@ import json
 mystery_box_queue = dict()
 madlibs_queue = dict()
 ispy_ref = dict()
+'''
+      [[""], [""]],
+'''
 ispy_topics = [
-    ["https://github.com/cnfgsean/Lexi/blob/master/ispy/pexels-photo-1643324.jpeg?raw=true",
+    ["https://github.com/cnfgsean/Lexi/blob/master/ispy/1.jpeg?raw=true",
      [[["sweet"], ["strawberry"]],
+      [["sour"], ["lemon"]],
+      [["green"], ["strawberry", "leaf", "strawberry leaf", "leaves", "strawberry leaves"]],
+      [["wet"], ["water", "drinks"]],
       [["circular"], ["lemon"]]]
      ],
-    ["https://github.com/cnfgsean/Lexi/blob/master/ispy/pexels-photo-1643324.jpeg?raw=true",
-     [[["sweet"], ["strawberry"]],
-      [["circular"], ["lemon"]]]
+    ["https://github.com/cnfgsean/Lexi/blob/master/ispy/2.jpg?raw=true",
+     [[["round"], ["clock"]],
+      [["round"], ["lamp"]],
+      [["wooden"], ["floor", "hardwood floor", "ground"]],
+      [["fun"], ["tv", "television"]],
+      [["square"], ["rug", "carpet"]],
+      [["silver"], ["statue", "woman"]],
+      [["pretty"], ["flowers", "flower pot", "sunflowers", "flower", "sunflower", "sunflower pot", "sunflowers pot"]],
+      [["soft"], ["pillow", "pillows"]]]
+     ],
+    ["https://github.com/cnfgsean/Lexi/blob/master/ispy/3.jpeg?raw=true",
+     [[["warm"], ["sweater", "sleeves"]],
+      [["white"], ["cup", "mug"]],
+      [["white"], ["snowman", "snow man", "cookie", "snowman cookie", "snow man cookie", "snowman face", "snow man face"]],
+      [["dark"], ["tag", "box tag"]],
+      [["white"], ["box", "white box"]],
+      [["that relates to the number '5'"], ["hand", "hands"]],
+      [["that relates to the number '5'"], ["star", "stars"]],
+      [["warm"], ["coffee", "hot chocolate"]]]
+     ],
+    ["https://github.com/cnfgsean/Lexi/blob/master/ispy/4.jpeg?raw=true",
+     [[["tall"], ["mountain", "mountains", "volcano"]],
+      [["square"], ["window", "windows"]],
+      [["square"], ["painting", "photo", "frame", "picture"]],
+      [["that is floating"], ["tv stand", "television stand"]],
+      [["blue"], ["sky", "the sky"]],
+      [["blue"], ["water", "the water", "ocean", "the ocean", "sea", "the sea"]],
+      [["soft"], ["sofa", "couch"]],
+      [["that is on the couch"], ["pillow, pillows"]],
+      [["that is on the couch"], ["towel", "blanket"]],
+      [["that is on something white"], ["tv", "television"]],
+      [["that is on something white"], ["painting", "picture", "photo", "frame"]],
+      [["square"], ["pillow", "pillows"]]]
      ]
 ]
 
@@ -316,7 +352,7 @@ class Games:
                     await self.client.say("What kind of guess is that?")
                     return
                 if " ".join(str(content).lower().split()[2:]) in answer:
-                    await self.client.say("<@{}> : You got it! It is a _{}_.".format(ctx.message.author.id, " ".join(str(content).lower().split()[2:])))
+                    await self.client.say("<@{}> : You got it! It is _{}_.".format(ctx.message.author.id, " ".join(str(content).lower().split()[2:])))
                     ispy_ref[(server, channel)][3] = True
                 else:
                     ispy_ref[(server, channel)][4] += 1
@@ -331,7 +367,7 @@ class Games:
                     else:
                         await self.client.say("A {} is not correct. Try again.".format(" ".join(str(content).lower().split()[2:])))
             else:
-                await self.client.say("That doesn't make sense. Use `_ispy help` for a list of commands.")
+                await self.client.say("There's already a game happening. Use `_ispy help` for a list of commands.")
         if (server, channel) not in ispy_ref.keys():
             ispy_topic = random.choice(ispy_topics)  # TODO: incorporate answer in the mass array
             ispy_image = ispy_topic[0]

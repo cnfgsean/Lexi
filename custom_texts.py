@@ -142,6 +142,8 @@ class CustomTexts:
             if lines < 3:
                 await self.client.say("I need more lines to rant on {}.".format(lines))
                 await self.client.say("Try using more than 2 lines.")
+            elif lines > 30:
+                await self.client.say("Well, wouldn't that be annoying?")
             else:
                 poem_instance = poem.Poem(lines, subject)
                 poem_instance.rant()
